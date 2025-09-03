@@ -1,0 +1,225 @@
+/* Custom Styles for E-Commerce App */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1rem !important;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Product Cards */
+.product-card {
+  transition: all 0.3s ease;
+  border-radius: 1rem !important;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  transition: color 0.3s ease;
+}
+
+.product-title:hover {
+  color: #667eea !important;
+}
+
+/* Search Bar Fixes */
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  cursor: text !important;
+}
+
+.form-control {
+  cursor: text !important;
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* Back Button */
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+/* Cards */
+.card {
+  border-radius: 1rem !important;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 1rem 1rem 0 0 !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.5rem !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Pagination */
+.pagination .page-link {
+  border-radius: 0.5rem !important;
+  margin: 0 2px;
+  border: 1px solid #dee2e6;
+  color: #667eea;
+}
+
+.pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+}
+
+.pagination .page-link:hover {
+  background-color: #f8f9fa;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 1rem !important;
+  border: none;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  color: white;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  color: white;
+}
+
+/* Badges */
+.badge {
+  border-radius: 0.5rem !important;
+  font-weight: 500;
+}
+
+/* Navbar */
+.navbar-dark .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #667eea !important;
+}
+
+/* Form Controls */
+.form-select:focus,
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Spinner */
+.spinner-border-primary {
+  color: #667eea;
+}
+
+/* Custom utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem !important;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem !important;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+}
+
+/* Loading states */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Fix for input focus issues */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  cursor: text !important;
+}
+
+/* Ensure proper cursor for form elements */
+input,
+select,
+textarea {
+  cursor: text !important;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  cursor: pointer !important;
+}
