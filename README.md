@@ -9,6 +9,19 @@ A modern, full-stack e-commerce application built with the MERN stack (MongoDB, 
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
 
 ## Demo
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/61beb046-1b92-4613-b86f-d44a7f4fd24d" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/db22bcd7-8aa3-4a82-98cc-893c0fbb8336" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/eb750f39-4168-4aa2-b2c9-f5acc246d35d" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/00957f41-8616-4618-9620-3b30b31580fe" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/0ce0d943-3b41-4f51-b575-433fd068a022" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/83b35e3c-36ef-4a84-a7dd-f18322ed9b48" />
+
+<img width="1406" height="879" alt="Image" src="https://github.com/user-attachments/assets/c55ad6f3-c2a6-4c37-b935-072390d7b6d8" />
 
 ## ✨ Features
 
