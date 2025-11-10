@@ -1,0 +1,15 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+     - uses: actions/checkout@v2
+     - run: docker build . -t himanshu5024/e-commerce
+     - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAEM}} --password-stdin
+     - run: docker push himanshu5024/e-commerce:latest
