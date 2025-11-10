@@ -1,10 +1,13 @@
 const request = require('supertest');
-const mongoose = require('mongoose');
 
-// Mock mongoose.connect to avoid DB connection in tests
-jest.mock('mongoose', () => ({
-  connect: jest.fn().mockResolvedValue(),
-}));
+// Mock mongoose to avoid DB connection in tests
+jest.mock('mongoose', () => {
+  const actualMongoose = jest.requireActual('mongoose');
+  return {
+    ...actualMongoose,
+    connect: jest.fn().mockResolvedValue(),
+  };
+});
 
 const app = require('../server');
 
