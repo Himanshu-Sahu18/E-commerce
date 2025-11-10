@@ -172,7 +172,7 @@ export const CartProvider = ({ children }) => {
     } else {
       dispatch({ type: "CLEAR_CART" });
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, loadCart, dispatch]);
 
   return (
     <CartContext.Provider
