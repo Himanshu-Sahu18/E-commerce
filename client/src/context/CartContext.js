@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useReducer, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useReducer,
+  useEffect,
+  useCallback,
+} from "react";
 import axios from "axios";
 import { useAuth } from "./AuthContext";
 
@@ -61,7 +67,7 @@ export const CartProvider = ({ children }) => {
   const { isAuthenticated } = useAuth();
 
   // Load cart
-  const loadCart = async () => {
+  const loadCart = useCallback(async () => {
     if (!isAuthenticated) return;
 
     dispatch({ type: "SET_LOADING" });
@@ -77,7 +83,7 @@ export const CartProvider = ({ children }) => {
         payload: error.response?.data?.message || "Failed to load cart",
       });
     }
-  };
+  }, [isAuthenticated]);
 
   // Add to cart
   const addToCart = async (productId, quantity = 1) => {
@@ -172,7 +178,7 @@ export const CartProvider = ({ children }) => {
     } else {
       dispatch({ type: "CLEAR_CART" });
     }
-  }, [isAuthenticated, loadCart, dispatch]);
+  }, [isAuthenticated, loadCart]);
 
   return (
     <CartContext.Provider
