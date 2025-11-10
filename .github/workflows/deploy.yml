@@ -21,5 +21,5 @@ jobs:
       - name: Build Docker image
         run: docker build . -t himanshu5024/e-commerce:latest
 
-      - name: Push to Docker Hub 
+      - name: Push to Docker Hub
         run: docker push himanshu5024/e-commerce:latest
