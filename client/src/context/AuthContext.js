@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useReducer, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useReducer,
+  useEffect,
+  useCallback,
+} from "react";
 import axios from "axios";
 
 const AuthContext = createContext();
@@ -62,7 +68,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   // Load user
-  const loadUser = async () => {
+  const loadUser = useCallback(async () => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
       try {
@@ -77,7 +83,7 @@ export const AuthProvider = ({ children }) => {
     } else {
       dispatch({ type: "AUTH_ERROR" });
     }
-  };
+  }, []);
 
   // Register user
   const register = async (userData) => {
@@ -144,7 +150,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     loadUser();
-  }, []);
+  }, [loadUser]);
 
   return (
     <AuthContext.Provider
